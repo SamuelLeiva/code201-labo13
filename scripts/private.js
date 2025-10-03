@@ -5,7 +5,6 @@ const cartCountElement = document.getElementById("cart-count");
 if(!localStorage.getItem("logged") || localStorage.getItem("logged") === "false")
     window.location.href = "./index.html"
 
-
 // Llama al carrito al inicio para que la pagina muestre la cantidad
 updateCartCount()
 
