@@ -2,11 +2,15 @@ const btnLogout = document.getElementById("logout");
 const cardGallery = document.querySelector(".card-gallery");
 const cartCountElement = document.getElementById("cart-count");
 
+if(!localStorage.getItem("logged") || localStorage.getItem("logged") === "false")
+    window.location.href = "./index.html"
+
+
 // Llama al carrito al inicio para que la pagina muestre la cantidad
 updateCartCount()
 
 btnLogout.addEventListener("click", () => {
-  localStorage.removeItem("logged");
+  localStorage.setItem("logged", "false");
   window.location.href = "./index.html";
 });
 
