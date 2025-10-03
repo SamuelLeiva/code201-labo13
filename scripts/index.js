@@ -1,4 +1,8 @@
-localStorage.setItem("logged", "false"); 
+// Comprobar si la inicion está iniciada
+if(localStorage.getItem("logged") === "true")
+    window.location.href = "./private.html"
+else
+    localStorage.setItem("logged", "false"); 
 
 const username = document.getElementById("inputUsername");
 const password = document.getElementById("inputPassword");
