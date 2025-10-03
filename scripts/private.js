@@ -43,6 +43,7 @@ fetch("https://fakestoreapi.com/products?limit=8")
 function getCartItems() {
   const cart = localStorage.getItem("cart");
   // Si existe, parseamos el JSON; si no, devolvemos un arreglo vacío
+  console.log(cart)
   return cart ? JSON.parse(cart) : [];
 }
 
