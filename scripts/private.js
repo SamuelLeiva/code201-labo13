@@ -3,7 +3,8 @@ const cardGallery = document.querySelector(".card-gallery");
 const cartCountElement = document.getElementById("cart-count");
 
 //obtiene el valor del carrito actual
-cartCountElement.textContent = JSON.parse(localStorage.getItem("cart")).length
+if(localStorage.getItem("cart"))
+  cartCountElement.textContent = JSON.parse(localStorage.getItem("cart")).length
 
 btnLogout.addEventListener("click", () => {
   localStorage.removeItem("logged");
