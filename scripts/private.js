@@ -2,9 +2,8 @@ const btnLogout = document.getElementById("logout");
 const cardGallery = document.querySelector(".card-gallery");
 const cartCountElement = document.getElementById("cart-count");
 
-//obtiene el valor del carrito actual
-if(localStorage.getItem("cart"))
-  cartCountElement.textContent = JSON.parse(localStorage.getItem("cart")).length
+// Llama al carrito al inicio para que la pagina muestre la cantidad
+updateCartCount()
 
 btnLogout.addEventListener("click", () => {
   localStorage.removeItem("logged");
